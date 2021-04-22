@@ -24,9 +24,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.SuccessAdded);
         }
 
-        public IResult Delete(Address address)
+        public IResult Delete(int addressId)
         {
-            _addressDal.Delete(address);
+            _addressDal.Delete(new Address { Id=addressId});
             return new SuccessResult(Messages.SuccessDeleted);
         }
 
@@ -41,9 +41,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Address>>(_addressDal.GetAll(u => u.UserId == userId));
         }
 
-        public IResult Update(Address address)
+        public IResult Update(int addressId)
         {
-            _addressDal.Update(address);
+            _addressDal.Update(new Address { Id=addressId});
             return new SuccessResult(Messages.SuccessUpdated);
         }
     }

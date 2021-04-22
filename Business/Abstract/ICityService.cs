@@ -10,8 +10,8 @@ namespace Business.Abstract
         IDataResult<List<City>> GetByCountryId(int countryId);
 
         IResult Add(City city);
-        IResult Delete(City city);
-        IResult Update(City city);
+        IResult Delete(int cityId);
+        IResult Update(int cityId);
     }
 
 }

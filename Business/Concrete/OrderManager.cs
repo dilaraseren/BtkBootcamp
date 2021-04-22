@@ -28,15 +28,15 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IResult Delete(Order order)
+        public IResult Delete(int orderId)
         {
-            _orderDal.Delete(order);
+            _orderDal.Delete(new Order { Id=orderId});
             return new SuccessResult();
         }
 
-        public IResult Update(Order order)
+        public IResult Update(int orderId)
         {
-            _orderDal.Update(order);
+            _orderDal.Update(new Order { Id=orderId});
             return new SuccessResult();
         }
 

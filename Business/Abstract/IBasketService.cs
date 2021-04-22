@@ -12,7 +12,7 @@ namespace Business.Abstract
         IDataResult<List<Basket>> GetByProductId(int productId);
 
         IResult Add(Basket basket);
-        IResult Update(Basket basket);
-        IResult Delete(Basket basket);
+        IResult Update(int basketId);
+        IResult Delete(int basketId);
     }
 }

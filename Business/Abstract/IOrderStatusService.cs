@@ -9,8 +9,8 @@ namespace Business.Abstract
         IDataResult<List<OrderStatus>> GetAll();
 
         IResult Add(OrderStatus orderStatus);
-        IResult Delete(OrderStatus orderStatus);
-        IResult Update(OrderStatus orderStatus);
+        IResult Delete(int orderStatusId);
+        IResult Update(int orderStatusId);
     }
 
 }

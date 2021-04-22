@@ -28,15 +28,15 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IResult Delete(Country country)
+        public IResult Delete(int countryId)
         {
-            _countryDal.Delete(country);
+            _countryDal.Delete(new Country { Id=countryId});
             return new SuccessResult();
         }
 
-        public IResult Update(Country country)
+        public IResult Update(int countryId)
         {
-            _countryDal.Update(country);
+            _countryDal.Update(new Country { Id=countryId});
             return new SuccessResult();
         }
 

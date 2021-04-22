@@ -10,8 +10,8 @@ namespace Business.Abstract
         IDataResult<List<Order>> GetByOrderStatusId(int orderStatusId);
 
         IResult Add(Order order);
-        IResult Delete(Order order);
-        IResult Update(Order order);
+        IResult Delete(int orderId);
+        IResult Update(int orderId);
     }
 
 }

@@ -24,9 +24,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.SuccessAdded);
         }
 
-        public IResult Delete(Brand brand)
+        public IResult Delete(int brandId)
         {
-            _brandDal.Delete(brand);
+            _brandDal.Delete(new Brand { Id=brandId});
             return new SuccessResult(Messages.SuccessDeleted);
         }
 
@@ -40,9 +40,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(b=>b.Id==id));
         }
 
-        public IResult Update(Brand brand)
+        public IResult Update(int brandId)
         {
-            _brandDal.Update(brand);
+            _brandDal.Update(new Brand { Id=brandId});
             return new SuccessResult(Messages.SuccessUpdated);
         }
     }

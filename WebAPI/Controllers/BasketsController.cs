@@ -57,9 +57,9 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpPost("delete")]
-        public IActionResult Delete(Basket basket)
+        public IActionResult Delete(int basketId)
         {
-            var result = _basketService.Delete(basket);
+            var result = _basketService.Delete(basketId);
             if (result.Success)
             {
                 return Ok(result);
@@ -68,9 +68,9 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
         [HttpPost("update")]
-        public IActionResult Update(Basket basket)
+        public IActionResult Update(int basketId)
         {
-            var result = _basketService.Update(basket);
+            var result = _basketService.Update(basketId);
             if (result.Success)
             {
                 return Ok(result);

@@ -24,6 +24,13 @@ namespace Business.Concrete
             return new SuccessResult(Messages.SuccessAdded);
         }
 
+        public IResult Delete(int basketId)
+        {
+
+            _basketDal.Delete(new Basket {Id=basketId });
+            return new SuccessResult(Messages.SuccessDeleted);
+        }
+
         public IDataResult<List<Basket>> GetAll()
         {
             if (DateTime.Now.Hour == 23)
@@ -37,6 +44,12 @@ namespace Business.Concrete
         public IDataResult<List<Basket>> GetByProductId(int productId)
         {
             return new SuccessDataResult<List<Basket>>(_basketDal.GetAll(p => p.ProductId == productId));
+        }
+
+        public IResult Update(int basketId)
+        {
+            _basketDal.Update(new Basket { Id = basketId });
+            return new SuccessResult(Messages.SuccessUpdated);
         }
     }
 }
