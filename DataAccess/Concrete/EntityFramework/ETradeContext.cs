@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-B5UC34J;Database=ETRADE;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-B5UC34J;Database=BtkDukkan;Trusted_Connection=true");
         }
 
         public DbSet<Basket> Baskets { get; set; }
@@ -28,6 +28,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿
+using Core.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -35,5 +36,16 @@ namespace Business.Constants
 
         public static string AuthorizationDenied="Yetkiniz yok.";
 
+        public static string UserNotFound = "Kullanıcı bulunamadı";
+
+        public static string PasswordError = "Hatalı Şifre";
+
+        public static string SuccessfulLogin = "Başarılı girişş";
+
+        public static string UserAlreadyExists = "Kullanıcı zaten var";
+
+        public static string AccessTokenCreated = "Token oluştu";
+
+        public static string UserRegistered = "Kullanıcı Kayıtlı";
     }
 }

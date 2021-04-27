@@ -9,7 +9,7 @@ namespace Entities.Concrete
     {
         public long Id { get; set; }
         public long OrderId { get; set; }
-        public long ProductId { get; set; }
+        public int ProductId { get; set; }
         public int Count { get; set; }
         public decimal SalePrice { get; set; }
         public DateTime CreateDate { get; set; }

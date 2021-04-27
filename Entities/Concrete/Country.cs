@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
    public class Country:IEntity
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public DateTime CreateDaete { get; set; }
         public bool Active { get; set; }

@@ -48,6 +48,7 @@ namespace WebAPI.Controllers
         [HttpPost("add")]
         public IActionResult Add(Basket basket)
         {
+
             var result = _basketService.Add(basket);
             if (result.Success)
             {
@@ -56,6 +57,7 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
         }
+
         [HttpPost("delete")]
         public IActionResult Delete(int basketId)
         {
